@@ -70,6 +70,7 @@
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
+                                    <action selector="doneTyping:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Oid-jp-T1u"/>
                                     <action selector="textOriginEditing:" destination="BYZ-38-t0r" eventType="editingChanged" id="fpo-2I-lvN"/>
                                 </connections>
                             </textField>

@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Reverse word
+//  Reverse word first app
 //
 //  Created by Andrey Baykov on 9/28/22.
 //
@@ -43,6 +43,9 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func doneTyping(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     
     @IBAction func textOriginEditing(_ sender: Any) {
         if (textOrigin.text == "") {
