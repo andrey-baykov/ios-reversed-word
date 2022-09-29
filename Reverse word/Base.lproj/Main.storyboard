@@ -69,6 +69,9 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textOriginEditing:" destination="BYZ-38-t0r" eventType="editingChanged" id="fpo-2I-lvN"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGC-QN-aXK">
                                 <rect key="frame" x="16" y="354" width="288" height="1"/>
@@ -86,10 +89,14 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Reverse">
                                     <color key="baseBackgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="clickReverseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bI-Nj-ST0"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-A0-lnD">
-                                <rect key="frame" x="16" y="378" width="288" height="21"/>
+                                <rect key="frame" x="16" y="363" width="288" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0Ut-Tq-uS5"/>
                                     <constraint firstAttribute="height" constant="21" id="ShV-Xt-e16"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -100,8 +107,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="7OB-A0-lnD" firstAttribute="top" secondItem="SGC-QN-aXK" secondAttribute="bottom" constant="8" symbolic="YES" id="14z-or-zS0"/>
                             <constraint firstItem="SZK-Jr-gH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1C4-sL-yZC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7OB-A0-lnD" secondAttribute="trailing" constant="16" id="3HP-2u-8u0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7OB-A0-lnD" secondAttribute="trailing" constant="16" id="Aez-kk-nfP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0zG-nB-Ub2" secondAttribute="trailing" constant="16" id="DH4-ox-9if"/>
                             <constraint firstItem="SZK-Jr-gH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dn6-16-bhO"/>
                             <constraint firstItem="SZK-Jr-gH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DsI-Yv-a28"/>
@@ -111,12 +119,11 @@
                             <constraint firstItem="SGC-QN-aXK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J5J-yd-YK5"/>
                             <constraint firstItem="deo-hh-weH" firstAttribute="top" secondItem="mQn-Dg-PIT" secondAttribute="bottom" constant="16" id="Lce-Ua-OMB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvk-gs-Ylw" secondAttribute="trailing" constant="16" id="OdC-Rt-5oo"/>
-                            <constraint firstItem="7OB-A0-lnD" firstAttribute="top" secondItem="SGC-QN-aXK" secondAttribute="bottom" constant="23" id="SNa-Cy-kS5"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deo-hh-weH" secondAttribute="trailing" constant="6" id="Sbb-K3-fwb"/>
                             <constraint firstItem="deo-hh-weH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="Se5-I0-QfT"/>
                             <constraint firstItem="cdY-Au-391" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="USo-xP-uK6"/>
                             <constraint firstItem="SZK-Jr-gH9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VRy-3W-CvS"/>
-                            <constraint firstItem="7OB-A0-lnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="WaD-ym-uqC"/>
+                            <constraint firstItem="7OB-A0-lnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="alt-FJ-LNe"/>
                             <constraint firstItem="SGC-QN-aXK" firstAttribute="top" secondItem="0zG-nB-Ub2" secondAttribute="bottom" constant="8" symbolic="YES" id="av5-9e-AxU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gvk-gs-Ylw" secondAttribute="bottom" constant="34" id="cBS-gH-kxf"/>
                             <constraint firstItem="mQn-Dg-PIT" firstAttribute="top" secondItem="SZK-Jr-gH9" secondAttribute="bottom" constant="52" id="h0z-Sw-qdH"/>
@@ -129,6 +136,11 @@
                             <constraint firstItem="SGC-QN-aXK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sUc-8O-8ty"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="resultText" destination="7OB-A0-lnD" id="CCd-IQ-AkG"/>
+                        <outlet property="reverseButton" destination="gvk-gs-Ylw" id="FdI-OY-KDt"/>
+                        <outlet property="textOrigin" destination="0zG-nB-Ub2" id="9e5-4H-VTA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
