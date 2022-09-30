@@ -19,54 +19,24 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_word" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_word" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZK-Jr-gH9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                <color key="backgroundColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="w09-U5-0eV"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdY-Au-391">
-                                <rect key="frame" x="82" y="56" width="156" height="22"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="22" id="iAl-GO-i2f"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQn-Dg-PIT">
-                                <rect key="frame" x="0.0" y="152" width="320" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="41" id="j3e-sY-YyF"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="152" width="320" height="40"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deo-hh-weH">
-                                <rect key="frame" x="6" y="209" width="308" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="ed8-NI-07s"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deo-hh-weH">
+                                <rect key="frame" x="6" y="208" width="308" height="40"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
-                                <color key="textColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-nB-Ub2">
-                                <rect key="frame" x="16" y="312" width="288" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="34" id="kcr-4I-RZ8"/>
-                                </constraints>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="16" y="307" width="288" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -74,18 +44,11 @@
                                     <action selector="textOriginEditing:" destination="BYZ-38-t0r" eventType="editingChanged" id="fpo-2I-lvN"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGC-QN-aXK">
-                                <rect key="frame" x="16" y="354" width="288" height="1"/>
-                                <color key="backgroundColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="c3F-Gr-tc4"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvk-gs-Ylw">
-                                <rect key="frame" x="16" y="499" width="288" height="35"/>
+                                <rect key="frame" x="16" y="442" width="288" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="pLI-6E-sGv"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Reverse">
                                     <color key="baseBackgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -95,52 +58,58 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-A0-lnD">
-                                <rect key="frame" x="16" y="363" width="288" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="0Ut-Tq-uS5"/>
-                                    <constraint firstAttribute="height" constant="21" id="ShV-Xt-e16"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="16" y="345.5" width="288" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j7g-Cw-GOS">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="72f-Jg-1bl"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="Reverse Words" id="cvZ-7Q-rLh"/>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="953-Me-P2b">
+                                <rect key="frame" x="16" y="336.5" width="288" height="1"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="KNv-uW-j3u"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="7OB-A0-lnD" firstAttribute="top" secondItem="SGC-QN-aXK" secondAttribute="bottom" constant="8" symbolic="YES" id="14z-or-zS0"/>
-                            <constraint firstItem="SZK-Jr-gH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1C4-sL-yZC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gvk-gs-Ylw" secondAttribute="bottom" constant="66" id="0k8-mJ-GzV"/>
+                            <constraint firstItem="j7g-Cw-GOS" firstAttribute="trailing" secondItem="mQn-Dg-PIT" secondAttribute="trailing" id="8C7-Qb-G53"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7OB-A0-lnD" secondAttribute="trailing" constant="16" id="Aez-kk-nfP"/>
+                            <constraint firstItem="953-Me-P2b" firstAttribute="top" secondItem="0zG-nB-Ub2" secondAttribute="bottom" constant="8" id="CX8-0x-AnE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0zG-nB-Ub2" secondAttribute="trailing" constant="16" id="DH4-ox-9if"/>
-                            <constraint firstItem="SZK-Jr-gH9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dn6-16-bhO"/>
-                            <constraint firstItem="SZK-Jr-gH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DsI-Yv-a28"/>
                             <constraint firstItem="gvk-gs-Ylw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EiN-3p-MHX"/>
                             <constraint firstItem="0zG-nB-Ub2" firstAttribute="top" secondItem="deo-hh-weH" secondAttribute="bottom" constant="59" id="FgO-Ue-Rvq"/>
-                            <constraint firstItem="SZK-Jr-gH9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ivz-tx-cFc"/>
-                            <constraint firstItem="SGC-QN-aXK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="J5J-yd-YK5"/>
+                            <constraint firstItem="j7g-Cw-GOS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HRu-d9-zPh"/>
+                            <constraint firstItem="j7g-Cw-GOS" firstAttribute="leading" secondItem="mQn-Dg-PIT" secondAttribute="leading" id="JbB-rg-M9D"/>
+                            <constraint firstItem="953-Me-P2b" firstAttribute="trailing" secondItem="7OB-A0-lnD" secondAttribute="trailing" id="KTP-K8-TaD"/>
+                            <constraint firstItem="7OB-A0-lnD" firstAttribute="top" secondItem="953-Me-P2b" secondAttribute="bottom" constant="8" symbolic="YES" id="LAv-Ku-WqM"/>
                             <constraint firstItem="deo-hh-weH" firstAttribute="top" secondItem="mQn-Dg-PIT" secondAttribute="bottom" constant="16" id="Lce-Ua-OMB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvk-gs-Ylw" secondAttribute="trailing" constant="16" id="OdC-Rt-5oo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deo-hh-weH" secondAttribute="trailing" constant="6" id="Sbb-K3-fwb"/>
                             <constraint firstItem="deo-hh-weH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="Se5-I0-QfT"/>
-                            <constraint firstItem="cdY-Au-391" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="USo-xP-uK6"/>
-                            <constraint firstItem="SZK-Jr-gH9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VRy-3W-CvS"/>
+                            <constraint firstItem="953-Me-P2b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Uud-Qn-eBN"/>
                             <constraint firstItem="7OB-A0-lnD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="alt-FJ-LNe"/>
-                            <constraint firstItem="SGC-QN-aXK" firstAttribute="top" secondItem="0zG-nB-Ub2" secondAttribute="bottom" constant="8" symbolic="YES" id="av5-9e-AxU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gvk-gs-Ylw" secondAttribute="bottom" constant="34" id="cBS-gH-kxf"/>
-                            <constraint firstItem="mQn-Dg-PIT" firstAttribute="top" secondItem="SZK-Jr-gH9" secondAttribute="bottom" constant="52" id="h0z-Sw-qdH"/>
-                            <constraint firstItem="cdY-Au-391" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="if2-ZD-Qdx"/>
-                            <constraint firstItem="mQn-Dg-PIT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="lIP-2H-sfF"/>
+                            <constraint firstItem="mQn-Dg-PIT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kyp-on-6Iw"/>
+                            <constraint firstItem="mQn-Dg-PIT" firstAttribute="top" secondItem="j7g-Cw-GOS" secondAttribute="bottom" constant="108" id="mBb-pT-RMh"/>
                             <constraint firstItem="mQn-Dg-PIT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nyp-10-mbx"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cdY-Au-391" secondAttribute="trailing" constant="82" id="pkC-rf-YYe"/>
-                            <constraint firstItem="SZK-Jr-gH9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qMZ-O4-CSd"/>
                             <constraint firstItem="0zG-nB-Ub2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rc8-On-57d"/>
-                            <constraint firstItem="SGC-QN-aXK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="sUc-8O-8ty"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="resultText" destination="7OB-A0-lnD" id="CCd-IQ-AkG"/>
+                        <outlet property="inputTextField" destination="0zG-nB-Ub2" id="7h1-L3-AlY"/>
                         <outlet property="reverseButton" destination="gvk-gs-Ylw" id="FdI-OY-KDt"/>
-                        <outlet property="textOrigin" destination="0zG-nB-Ub2" id="9e5-4H-VTA"/>
+                        <outlet property="reversedLabel" destination="7OB-A0-lnD" id="CCd-IQ-AkG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -149,6 +118,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
