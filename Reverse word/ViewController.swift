@@ -1,6 +1,6 @@
 import UIKit
 
-final class ViewController: UIViewController {
+final class ReverseWordsViewController: UIViewController {
 
     @IBOutlet weak var reversedLabel: UILabel!
     @IBOutlet weak var reverseButton: UIButton!
@@ -14,9 +14,10 @@ final class ViewController: UIViewController {
         reverseButton.setTitle("Reverse", for: .normal)
     }
     
-    @IBAction func clickReverseButton(_ sender: Any) {
+         
+    @IBAction func clickReverseButton() {
         if reverseCondition {
-            reversedLabel.text = reverseString(originText: inputTextField.text ?? "")
+            reversedLabel.text = reversedString(originText: inputTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             inputTextField.isUserInteractionEnabled = false
             reverseCondition = false
@@ -28,23 +29,29 @@ final class ViewController: UIViewController {
             reverseCondition = true
             inputTextField.isUserInteractionEnabled = true
         }
+        
     }
     
-    @IBAction func doneTyping(_ sender: UITextField) {
-        sender.resignFirstResponder()
-    }
-    
-    @IBAction func textOriginEditing(_ sender: Any) {
+    @IBAction func typingText() {
         reverseButton.isEnabled = inputTextField.text?.isEmpty == false
     }
     
-    func reverseString(originText: String) -> String {
+    func reversedString(originText: String) -> String {
         let arrayOrigin = [String](originText.components(separatedBy: " "))
         var arrayOutput = [String]()
         for word in arrayOrigin {
             arrayOutput.append(String(word.reversed()))
         }
         return arrayOutput.joined(separator: " ")
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    @IBAction func typingIsDone() {
+        inputTextField.resignFirstResponder()
     }
 }
 

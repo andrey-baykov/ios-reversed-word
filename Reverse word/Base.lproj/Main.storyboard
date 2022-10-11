@@ -16,10 +16,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Reverse Words View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Reverse_word" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="Reverse_word" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -40,8 +40,8 @@
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="doneTyping:" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Oid-jp-T1u"/>
-                                    <action selector="textOriginEditing:" destination="BYZ-38-t0r" eventType="editingChanged" id="fpo-2I-lvN"/>
+                                    <action selector="typingIsDone" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="00f-a9-waP"/>
+                                    <action selector="typingText" destination="BYZ-38-t0r" eventType="editingChanged" id="Ddi-Bb-cNq"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvk-gs-Ylw">
@@ -54,7 +54,7 @@
                                     <color key="baseBackgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="clickReverseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9bI-Nj-ST0"/>
+                                    <action selector="clickReverseButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="PlR-TS-yDs"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7OB-A0-lnD">

@@ -1,3 +1,10 @@
+//
+//  AppDelegate.swift
+//  Reverse word
+//
+//  Created by Andrey Baykov on 9/28/22.
+//
+
 import UIKit
 
 @main
