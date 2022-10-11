@@ -6,7 +6,8 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var inputTextField: UITextField!
     
-    var reverseCondition: Bool = true
+    //var reverseCondition: Bool = true
+    var isRevererseAction = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,24 +17,23 @@ final class ReverseWordsViewController: UIViewController {
     
          
     @IBAction func clickReverseButton() {
-        if reverseCondition {
+        if isRevererseAction {
             reversedLabel.text = reversedString(originText: inputTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
-            inputTextField.isUserInteractionEnabled = false
-            reverseCondition = false
+            isRevererseAction = false
         } else {
             inputTextField.text = ""
             reversedLabel.text = ""
             reverseButton.setTitle("Reverse", for: .normal)
             reverseButton.isEnabled = false
-            reverseCondition = true
-            inputTextField.isUserInteractionEnabled = true
+            isRevererseAction = true
         }
-        
     }
     
     @IBAction func typingText() {
         reverseButton.isEnabled = inputTextField.text?.isEmpty == false
+        reverseButton.setTitle("Reverse", for: .normal)
+        isRevererseAction = true
     }
     
     func reversedString(originText: String) -> String {
