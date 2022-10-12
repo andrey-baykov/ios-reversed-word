@@ -6,7 +6,6 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet weak var reverseButton: UIButton!
     @IBOutlet weak var inputTextField: UITextField!
     
-    //var reverseCondition: Bool = true
     var isRevererseAction = true
     
     override func viewDidLoad() {
