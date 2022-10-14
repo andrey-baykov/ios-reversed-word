@@ -10,8 +10,14 @@ final class ReverseWordsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
+//        self.navigationController?.navigationBar.shadowImage = UIImage()
+//        self.navigationController?.navigationBar.isTranslucent = true
         reverseButton.isEnabled = false
         reverseButton.setTitle("Reverse", for: .normal)
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.title = "Yoooohooo"
+        
     }
     
          
