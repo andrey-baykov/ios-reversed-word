@@ -2,11 +2,11 @@ import UIKit
 
 final class ReverseWordsViewController: UIViewController {
 
-    @IBOutlet weak var reversedLabel: UILabel!
-    @IBOutlet weak var reverseButton: UIButton!
-    @IBOutlet weak var inputTextField: UITextField!
+    @IBOutlet private weak var reversedLabel: UILabel!
+    @IBOutlet private weak var reverseButton: UIButton!
+    @IBOutlet private weak var inputTextField: UITextField!
     
-    var isRevererseAction = true
+    var isReversed = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,27 +17,29 @@ final class ReverseWordsViewController: UIViewController {
     }
     
          
-    @IBAction func clickReverseButton() {
-        if isRevererseAction {
-            reversedLabel.text = reversedString(originText: inputTextField.text ?? "")
-            reverseButton.setTitle("Clear", for: .normal)
-            isRevererseAction = false
-        } else {
+    @IBAction func reverseButtonTapped() {
+        if isReversed {
+            print("rev - true")
             inputTextField.text = ""
             reversedLabel.text = ""
             reverseButton.setTitle("Reverse", for: .normal)
             reverseButton.isEnabled = false
-            isRevererseAction = true
+            isReversed = false
+        } else {
+            print("rev - false")
+            reversedLabel.text = reversedString(originText: inputTextField.text ?? "")
+            reverseButton.setTitle("Clear", for: .normal)
+            isReversed = true
         }
     }
     
-    @IBAction func typingText() {
+    @IBAction func inputTextChanged() {
         reverseButton.isEnabled = inputTextField.text?.isEmpty == false
         reverseButton.setTitle("Reverse", for: .normal)
-        isRevererseAction = true
+        isReversed = false
     }
     
-    func reversedString(originText: String) -> String {
+    private func reversedString(originText: String) -> String {
         let arrayOrigin = [String](originText.components(separatedBy: " "))
         var arrayOutput = [String]()
         for word in arrayOrigin {
@@ -50,9 +52,7 @@ final class ReverseWordsViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    
     @IBAction func typingIsDone() {
         inputTextField.resignFirstResponder()
     }
 }
-

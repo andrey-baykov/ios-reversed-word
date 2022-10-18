@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7E1593D728E4C38F00481595 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1593D628E4C38F00481595 /* AppDelegate.swift */; };
 		7E1593D928E4C38F00481595 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1593D828E4C38F00481595 /* SceneDelegate.swift */; };
-		7E1593DB28E4C38F00481595 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1593DA28E4C38F00481595 /* ViewController.swift */; };
+		7E1593DB28E4C38F00481595 /* ReverseWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E1593DA28E4C38F00481595 /* ReverseWordsViewController.swift */; };
 		7E1593DE28E4C38F00481595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1593DC28E4C38F00481595 /* Main.storyboard */; };
 		7E1593E028E4C39000481595 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E1593DF28E4C39000481595 /* Assets.xcassets */; };
 		7E1593E328E4C39000481595 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E1593E128E4C39000481595 /* LaunchScreen.storyboard */; };
@@ -20,7 +20,7 @@
 		7E1593D328E4C38F00481595 /* Reverse word.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reverse word.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E1593D628E4C38F00481595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E1593D828E4C38F00481595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7E1593DA28E4C38F00481595 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7E1593DA28E4C38F00481595 /* ReverseWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsViewController.swift; sourceTree = "<group>"; };
 		7E1593DD28E4C38F00481595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E1593DF28E4C39000481595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7E1593E228E4C39000481595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				7E1593D628E4C38F00481595 /* AppDelegate.swift */,
 				7E1593D828E4C38F00481595 /* SceneDelegate.swift */,
-				7E1593DA28E4C38F00481595 /* ViewController.swift */,
+				7E1593DA28E4C38F00481595 /* ReverseWordsViewController.swift */,
 				7E1593DC28E4C38F00481595 /* Main.storyboard */,
 				7E1593DF28E4C39000481595 /* Assets.xcassets */,
 				7E1593E128E4C39000481595 /* LaunchScreen.storyboard */,
@@ -142,7 +142,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E1593DB28E4C38F00481595 /* ViewController.swift in Sources */,
+				7E1593DB28E4C38F00481595 /* ReverseWordsViewController.swift in Sources */,
 				7E1593D728E4C38F00481595 /* AppDelegate.swift in Sources */,
 				7E1593D928E4C38F00481595 /* SceneDelegate.swift in Sources */,
 			);
