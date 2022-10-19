@@ -14,18 +14,19 @@ final class ReverseWordsViewController: UIViewController {
         reverseButton.setTitle("Reverse", for: .normal)
         self.navigationController?.navigationBar.isTranslucent = true
         self.title = "Reverse words"
+        inputTextField.accessibilityIdentifier = "inputTextField"
+        reversedLabel.accessibilityIdentifier = "reversedLabel"
+        reverseButton.accessibilityIdentifier = "reverseButton"
     }
     
     @IBAction func reverseButtonTapped() {
         if isReversed {
-            print("rev - true")
             inputTextField.text = ""
             reversedLabel.text = ""
             reverseButton.setTitle("Reverse", for: .normal)
             reverseButton.isEnabled = false
             isReversed = false
         } else {
-            print("rev - false")
             reversedLabel.text = reversedString(originText: inputTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             isReversed = true
