@@ -8,7 +8,7 @@
 import XCTest
 @testable import ReverseWord
 
-final class Reverse_word_tests: XCTestCase {
+final class ReverseWordTests: XCTestCase {
     
     let originTextArray = ["Test string", "Hello world", "ios"]
     let correctAnswersArray = ["tseT gnirts", "olleH dlrow", "soi"]
