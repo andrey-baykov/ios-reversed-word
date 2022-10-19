@@ -16,7 +16,6 @@ final class ReverseWordsViewController: UIViewController {
         self.title = "Reverse words"
     }
     
-         
     @IBAction func reverseButtonTapped() {
         if isReversed {
             print("rev - true")
@@ -39,7 +38,7 @@ final class ReverseWordsViewController: UIViewController {
         isReversed = false
     }
     
-    private func reversedString(originText: String) -> String {
+    func reversedString(originText: String) -> String {
         let arrayOrigin = [String](originText.components(separatedBy: " "))
         var arrayOutput = [String]()
         for word in arrayOrigin {
