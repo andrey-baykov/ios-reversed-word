@@ -10,8 +10,6 @@ import XCTest
 
 final class ReverseWordTests: XCTestCase {
     
-    let originTextArray = ["Test string", "Hello world", "ios"]
-    let correctAnswersArray = ["tseT gnirts", "olleH dlrow", "soi"]
     override func setUpWithError() throws {
         
     }
@@ -20,10 +18,16 @@ final class ReverseWordTests: XCTestCase {
         
     }
 
-    func testReversedString() throws {
-        for index in 0...originTextArray.count - 1 {
-            XCTAssertEqual(ReverseWordsViewController().reversedString(originText: originTextArray[index]), correctAnswersArray[index])
-        }
+    func testReversedStringFirst() throws {
+        XCTAssertEqual(ReverseWordsViewController().reversedString(originText: "Test string"), "tseT gnirts")
+    }
+    
+    func testReversedStringSecond() throws {
+        XCTAssertEqual(ReverseWordsViewController().reversedString(originText: "Hello world"), "olleH dlrow")
+    }
+    
+    func testReversedStringThird() throws {
+        XCTAssertEqual(ReverseWordsViewController().reversedString(originText: "ios"), "soi")
     }
 
 }
