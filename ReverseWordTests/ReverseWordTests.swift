@@ -10,24 +10,26 @@ import XCTest
 
 final class ReverseWordTests: XCTestCase {
     
+    var textReverseManager: TextReverseManager?
+    
     override func setUpWithError() throws {
-        
+        textReverseManager = TextReverseManager()
     }
 
     override func tearDownWithError() throws {
-        
+        textReverseManager = nil
     }
 
-    func testReversedStringFirst() throws {
-        XCTAssertEqual(ReverseWordsViewController().reversedString(originText: "Test string"), "tseT gnirts")
+    func testReversedStringLettersOnly() throws {
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "Test string"), "tseT gnirts")
     }
     
-    func testReversedStringSecond() throws {
-        XCTAssertEqual(ReverseWordsViewController().reversedString(originText: "Hello world"), "olleH dlrow")
+    func testReversedStringWithNumbers() throws {
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "Hel1o w0rld"), "o1leH dlr0w")
     }
     
-    func testReversedStringThird() throws {
-        XCTAssertEqual(ReverseWordsViewController().reversedString(originText: "ios"), "soi")
+    func testReversedStringWithSpecialCharacters() throws {
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "!os"), "so!")
     }
 
 }

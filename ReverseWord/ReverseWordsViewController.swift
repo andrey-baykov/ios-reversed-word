@@ -1,5 +1,6 @@
 import UIKit
 
+
 final class ReverseWordsViewController: UIViewController {
 
     @IBOutlet private weak var reversedLabel: UILabel!
@@ -7,7 +8,8 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet private weak var inputTextField: UITextField!
     
     var isReversed = false
-    
+    var textReverseManager = TextReverseManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         reverseButton.isEnabled = false
@@ -27,7 +29,7 @@ final class ReverseWordsViewController: UIViewController {
             reverseButton.isEnabled = false
             isReversed = false
         } else {
-            reversedLabel.text = reversedString(originText: inputTextField.text ?? "")
+            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             isReversed = true
         }
@@ -37,15 +39,6 @@ final class ReverseWordsViewController: UIViewController {
         reverseButton.isEnabled = inputTextField.text?.isEmpty == false
         reverseButton.setTitle("Reverse", for: .normal)
         isReversed = false
-    }
-    
-    func reversedString(originText: String) -> String {
-        let arrayOrigin = [String](originText.components(separatedBy: " "))
-        var arrayOutput = [String]()
-        for word in arrayOrigin {
-            arrayOutput.append(String(word.reversed()))
-        }
-        return arrayOutput.joined(separator: " ")
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

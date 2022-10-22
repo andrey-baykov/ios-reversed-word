@@ -13,10 +13,6 @@ final class ReverseWordUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    override func tearDownWithError() throws {
-
-    }
-
     func testReverseWordOnce() throws {
         let app = XCUIApplication()
         app.launch()
