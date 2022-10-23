@@ -38,7 +38,7 @@ final class ReverseWordUITests: XCTestCase {
         XCTAssertEqual(reversedLabel.label, "tseT gnirts")
         XCTAssertEqual(reverseButton.label, "Clear")
         reverseButton.tap()
-        XCTAssertEqual(inputTextField.label, "")
+        XCTAssertEqual(reversedLabel.exists, false)
         XCTAssertEqual(reverseButton.label, "Reverse")
     }
     
