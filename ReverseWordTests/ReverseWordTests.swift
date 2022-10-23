@@ -10,7 +10,7 @@ import XCTest
 
 final class ReverseWordTests: XCTestCase {
     
-    var textReverseManager: TextReverseManager?
+    var textReverseManager: TextReverseManager!
     
     override func setUpWithError() throws {
         textReverseManager = TextReverseManager()

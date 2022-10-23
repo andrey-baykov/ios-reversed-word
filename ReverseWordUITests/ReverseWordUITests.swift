@@ -8,61 +8,57 @@
 import XCTest
 
 final class ReverseWordUITests: XCTestCase {
-
+    
+    let app = XCUIApplication()
+    private lazy var inputTextField = app.textFields["inputTextField"]
+    private lazy var returnButton = app.buttons["return"]
+    private lazy var reverseButton = app.buttons["reverseButton"]
+    private lazy var reversedLabel = app.staticTexts["reversedLabel"]
+    
     override func setUpWithError() throws {
         continueAfterFailure = false
-    }
-
-    func testReverseWordOnce() throws {
-        let app = XCUIApplication()
         app.launch()
-        app.textFields["inputTextField"].tap()
-        app.textFields["inputTextField"].typeText("Test string")
-        app.buttons["return"].tap()
-        app.buttons["reverseButton"].tap()
-        let actualResult: String = app.staticTexts["reversedLabel"].label
-        XCTAssertEqual(actualResult, "tseT gnirts")
-        XCTAssertEqual(app.buttons["reverseButton"].label, "Clear")
+    }
+    
+    func testReverseWordOnce() throws {
+        inputTextField.tap()
+        inputTextField.typeText("Test string")
+        returnButton.tap()
+        reverseButton.tap()
+        XCTAssertEqual(reversedLabel.label, "tseT gnirts")
+        XCTAssertEqual(reverseButton.label, "Clear")
     }
 
     func testReverseWordWithClear() throws {
-        let app = XCUIApplication()
-        app.launch()
-        app.textFields["inputTextField"].tap()
-        app.textFields["inputTextField"].typeText("Test string")
-        app.buttons["return"].tap()
-        app.buttons["reverseButton"].tap()
-        let actualResult: String = app.staticTexts["reversedLabel"].label
-        XCTAssertEqual(actualResult, "tseT gnirts")
-        XCTAssertEqual(app.buttons["reverseButton"].label, "Clear")
-        app.buttons["reverseButton"].tap()
-        XCTAssertEqual(app.textFields["inputTextField"].label, "")
-        XCTAssertEqual(app.buttons["reverseButton"].label, "Reverse")
+        inputTextField.tap()
+        inputTextField.typeText("Test string")
+        returnButton.tap()
+        reverseButton.tap()
+        XCTAssertEqual(reversedLabel.label, "tseT gnirts")
+        XCTAssertEqual(reverseButton.label, "Clear")
+        reverseButton.tap()
+        XCTAssertEqual(inputTextField.label, "")
+        XCTAssertEqual(reverseButton.label, "Reverse")
     }
     
-    func testReverseWordWithAddText() throws {
-        let app = XCUIApplication()
-        app.launch()
-        app.textFields["inputTextField"].tap()
-        app.textFields["inputTextField"].typeText("Test string")
-        app.buttons["return"].tap()
-        app.buttons["reverseButton"].tap()
-        let actualResult: String = app.staticTexts["reversedLabel"].label
-        XCTAssertEqual(actualResult, "tseT gnirts")
-        XCTAssertEqual(app.buttons["reverseButton"].label, "Clear")
-        app.textFields["inputTextField"].tap()
+    func testReverseWordWithAddedText() throws {
+        inputTextField.tap()
+        inputTextField.typeText("Test string")
+        returnButton.tap()
+        reverseButton.tap()
+        XCTAssertEqual(reversedLabel.label, "tseT gnirts")
+        XCTAssertEqual(reverseButton.label, "Clear")
+        inputTextField.tap()
         app.keys["space"].tap()
-        XCTAssertEqual(app.buttons["reverseButton"].label, "Reverse")
+        XCTAssertEqual(reverseButton.label, "Reverse")
         app.keys["a"].tap()
         app.keys["d"].tap()
         app.keys["d"].tap()
         app.keys["e"].tap()
         app.keys["d"].tap()
-        app.buttons["return"].tap()
-        app.buttons["reverseButton"].tap()
-        let actualResultNew: String = app.staticTexts["reversedLabel"].label
-        XCTAssertEqual(actualResultNew, "tseT gnirts dedda")
-        XCTAssertEqual(app.buttons["reverseButton"].label, "Clear")
+        returnButton.tap()
+        reverseButton.tap()
+        XCTAssertEqual(reversedLabel.label, "tseT gnirts dedda")
+        XCTAssertEqual(reverseButton.label, "Clear")
     }
-    
 }
