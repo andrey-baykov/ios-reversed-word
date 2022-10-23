@@ -20,20 +20,21 @@ final class ReverseWordUITests: XCTestCase {
         app.launch()
     }
     
-    func testReverseWordOnce() throws {
+    private func runCommonTestSteps(){
         inputTextField.tap()
         inputTextField.typeText("Test string")
         returnButton.tap()
         reverseButton.tap()
+    }
+    
+    func testReverseWordOnce() throws {
+        runCommonTestSteps()
         XCTAssertEqual(reversedLabel.label, "tseT gnirts")
         XCTAssertEqual(reverseButton.label, "Clear")
     }
 
     func testReverseWordWithClear() throws {
-        inputTextField.tap()
-        inputTextField.typeText("Test string")
-        returnButton.tap()
-        reverseButton.tap()
+        runCommonTestSteps()
         XCTAssertEqual(reversedLabel.label, "tseT gnirts")
         XCTAssertEqual(reverseButton.label, "Clear")
         reverseButton.tap()
@@ -42,10 +43,7 @@ final class ReverseWordUITests: XCTestCase {
     }
     
     func testReverseWordWithAddedText() throws {
-        inputTextField.tap()
-        inputTextField.typeText("Test string")
-        returnButton.tap()
-        reverseButton.tap()
+        runCommonTestSteps()
         XCTAssertEqual(reversedLabel.label, "tseT gnirts")
         XCTAssertEqual(reverseButton.label, "Clear")
         inputTextField.tap()
