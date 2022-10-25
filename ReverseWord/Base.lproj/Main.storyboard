@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="all" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ft-l9-v7k">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="0ft-l9-v7k">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
@@ -19,29 +19,30 @@
         <!--Reverse Words View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="Reverse_word" customModuleProvider="target" propertyAccessControl="all" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ReverseWordsViewController" customModule="ReverseWord" customModuleProvider="target" propertyAccessControl="none" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mQn-Dg-PIT">
-                                <rect key="frame" x="0.0" y="196" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="124" width="320" height="40"/>
                                 <fontDescription key="fontDescription" name="Roboto-Bold" family="Roboto" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deo-hh-weH">
-                                <rect key="frame" x="6" y="252" width="308" height="40"/>
+                                <rect key="frame" x="6" y="180" width="308" height="40"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Text to reverse" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zG-nB-Ub2">
-                                <rect key="frame" x="16" y="351" width="288" height="21.5"/>
+                                <rect key="frame" x="16" y="240" width="288" height="21.5"/>
                                 <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="inputTextChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="6ca-R7-lY4"/>
-                                    <action selector="typingIsDone" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="00f-a9-waP"/>
+                                    <action selector="typingIsDone" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="bby-Dv-Epn"/>
+                                    <action selector="typingIsDone" destination="BYZ-38-t0r" eventType="editingDidEnd" id="eHI-3o-njP"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvk-gs-Ylw">
@@ -49,23 +50,21 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="pLI-6E-sGv"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Reverse">
-                                    <color key="baseBackgroundColor" red="0.0" green="0.47843137254901957" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </buttonConfiguration>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Reverse"/>
                                 <connections>
                                     <action selector="reverseButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="xEY-D7-KuW"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="953-Me-P2b">
-                                <rect key="frame" x="16" y="380.5" width="288" height="1"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="953-Me-P2b">
+                                <rect key="frame" x="16" y="381.5" width="338" height="1"/>
                                 <color key="backgroundColor" systemColor="quaternaryLabelColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="KNv-uW-j3u"/>
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7k-bd-mAf">
-                                <rect key="frame" x="0.0" y="386" width="320" height="20"/>
+                                <rect key="frame" x="0.0" y="387" width="320" height="20"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEb-T6-GTY">
                                         <rect key="frame" x="0.0" y="0.0" width="40" height="20"/>
@@ -101,35 +100,67 @@
                                 <viewLayoutGuide key="contentLayoutGuide" id="efm-B1-kkH"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="hJr-4P-FWa"/>
                             </scrollView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="rjh-e6-pNo" userLabel="Default, Custom">
+                                <rect key="frame" x="16" y="269" width="288" height="32"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Custom"/>
+                                </segments>
+                                <connections>
+                                    <action selector="modeSwitched" destination="BYZ-38-t0r" eventType="valueChanged" id="lcJ-9Q-v87"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All characters except alphabetic symbols" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4c-No-GB1">
+                                <rect key="frame" x="16" y="308" width="288" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="71R-Bg-PHy">
+                                <rect key="frame" x="16" y="308" width="288" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gvk-gs-Ylw" secondAttribute="bottom" constant="66" id="0k8-mJ-GzV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="u4c-No-GB1" secondAttribute="trailing" constant="16" id="0v0-5S-ebe"/>
+                            <constraint firstItem="u4c-No-GB1" firstAttribute="top" secondItem="rjh-e6-pNo" secondAttribute="bottom" constant="8" id="4bc-xk-msD"/>
                             <constraint firstItem="A7k-bd-mAf" firstAttribute="top" secondItem="953-Me-P2b" secondAttribute="bottom" constant="4.5" id="6jA-PO-yuK"/>
                             <constraint firstItem="A7k-bd-mAf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="78z-Bg-SqI"/>
                             <constraint firstItem="A7k-bd-mAf" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="903-Ux-jUU"/>
-                            <constraint firstItem="953-Me-P2b" firstAttribute="top" secondItem="0zG-nB-Ub2" secondAttribute="bottom" constant="8" id="CX8-0x-AnE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0zG-nB-Ub2" secondAttribute="trailing" constant="16" id="DH4-ox-9if"/>
-                            <constraint firstItem="953-Me-P2b" firstAttribute="trailing" secondItem="0zG-nB-Ub2" secondAttribute="trailing" id="EHM-6r-gw5"/>
                             <constraint firstItem="gvk-gs-Ylw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="EiN-3p-MHX"/>
-                            <constraint firstItem="0zG-nB-Ub2" firstAttribute="top" secondItem="deo-hh-weH" secondAttribute="bottom" constant="59" id="FgO-Ue-Rvq"/>
+                            <constraint firstItem="0zG-nB-Ub2" firstAttribute="top" secondItem="deo-hh-weH" secondAttribute="bottom" constant="20" id="FgO-Ue-Rvq"/>
                             <constraint firstItem="deo-hh-weH" firstAttribute="top" secondItem="mQn-Dg-PIT" secondAttribute="bottom" constant="16" id="Lce-Ua-OMB"/>
+                            <constraint firstItem="71R-Bg-PHy" firstAttribute="top" secondItem="rjh-e6-pNo" secondAttribute="bottom" constant="8" id="MEX-5f-3KG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvk-gs-Ylw" secondAttribute="trailing" constant="16" id="OdC-Rt-5oo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rjh-e6-pNo" secondAttribute="trailing" constant="16" id="Qg8-Xt-c5s"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="deo-hh-weH" secondAttribute="trailing" constant="6" id="Sbb-K3-fwb"/>
                             <constraint firstItem="deo-hh-weH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="6" id="Se5-I0-QfT"/>
+                            <constraint firstItem="953-Me-P2b" firstAttribute="top" secondItem="0zG-nB-Ub2" secondAttribute="bottom" constant="120" id="SrN-Ou-IrX"/>
                             <constraint firstItem="953-Me-P2b" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Uud-Qn-eBN"/>
+                            <constraint firstItem="u4c-No-GB1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Vhc-Nu-mvm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="71R-Bg-PHy" secondAttribute="trailing" constant="16" id="Yv8-qf-r1R"/>
+                            <constraint firstItem="rjh-e6-pNo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="kwL-L1-7q7"/>
                             <constraint firstItem="mQn-Dg-PIT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kyp-on-6Iw"/>
-                            <constraint firstItem="mQn-Dg-PIT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="152" id="lWG-5X-E1j"/>
+                            <constraint firstItem="mQn-Dg-PIT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="lWG-5X-E1j"/>
+                            <constraint firstItem="rjh-e6-pNo" firstAttribute="top" secondItem="0zG-nB-Ub2" secondAttribute="bottom" constant="7.5" id="mTD-kc-gkz"/>
                             <constraint firstItem="mQn-Dg-PIT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="nyp-10-mbx"/>
                             <constraint firstItem="0zG-nB-Ub2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="rc8-On-57d"/>
+                            <constraint firstItem="71R-Bg-PHy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="yOg-vb-QHI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lZm-Y6-2Jl"/>
                     <connections>
+                        <outlet property="customModeTextField" destination="71R-Bg-PHy" id="bsY-dW-Zzv"/>
+                        <outlet property="defaultModeLabel" destination="u4c-No-GB1" id="ONh-gU-zci"/>
                         <outlet property="inputTextField" destination="0zG-nB-Ub2" id="7h1-L3-AlY"/>
                         <outlet property="reverseButton" destination="gvk-gs-Ylw" id="FdI-OY-KDt"/>
                         <outlet property="reversedLabel" destination="7OB-A0-lnD" id="CCd-IQ-AkG"/>
+                        <outlet property="switchModeSegmentedControl" destination="rjh-e6-pNo" id="25g-8V-cAp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

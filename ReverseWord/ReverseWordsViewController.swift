@@ -6,7 +6,11 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet private weak var reversedLabel: UILabel!
     @IBOutlet private weak var reverseButton: UIButton!
     @IBOutlet private weak var inputTextField: UITextField!
+    @IBOutlet weak var switchModeSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var defaultModeLabel: UILabel!
+    @IBOutlet weak var customModeTextField: UITextField!
     
+   
     var isReversed = false
     var textReverseManager = TextReverseManager()
 
@@ -19,6 +23,9 @@ final class ReverseWordsViewController: UIViewController {
         inputTextField.accessibilityIdentifier = "inputTextField"
         reversedLabel.accessibilityIdentifier = "reversedLabel"
         reverseButton.accessibilityIdentifier = "reverseButton"
+        switchModeSegmentedControl.selectedSegmentIndex = 0
+        defaultModeLabel.isHidden = false
+        customModeTextField.isHidden = true
     }
     
     @IBAction func reverseButtonTapped() {
@@ -48,4 +55,16 @@ final class ReverseWordsViewController: UIViewController {
     @IBAction func typingIsDone() {
         inputTextField.resignFirstResponder()
     }
+    
+    @IBAction func modeSwitched() {
+        print(switchModeSegmentedControl.selectedSegmentIndex)
+        if switchModeSegmentedControl.selectedSegmentIndex == 0 {
+            defaultModeLabel.isHidden = false
+            customModeTextField.isHidden = true
+        } else {
+            defaultModeLabel.isHidden = true
+            customModeTextField.isHidden = false
+        }
+    }
 }
+ 

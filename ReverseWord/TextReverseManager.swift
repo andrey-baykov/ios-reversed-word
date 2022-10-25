@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class TextReverseManager{
+final class TextReverseManager {
     
     func reversedString(originText: String) -> String {
         let arrayOrigin = [String](originText.components(separatedBy: " "))
