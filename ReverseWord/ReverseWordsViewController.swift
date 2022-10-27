@@ -32,11 +32,12 @@ final class ReverseWordsViewController: UIViewController {
         if isReversed {
             inputTextField.text = ""
             reversedLabel.text = ""
+            customModeTextField.text = ""
             reverseButton.setTitle("Reverse", for: .normal)
             reverseButton.isEnabled = false
             isReversed = false
         } else {
-            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "")
+            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "", ignoredCaracters: customModeTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             isReversed = true
         }
@@ -56,15 +57,26 @@ final class ReverseWordsViewController: UIViewController {
         inputTextField.resignFirstResponder()
     }
     
+    @IBAction func typingInIgnoredIsDone() {
+        inputTextField.resignFirstResponder()
+    }
+    
     @IBAction func modeSwitched() {
-        print(switchModeSegmentedControl.selectedSegmentIndex)
+        reversedLabel.text = ""
         if switchModeSegmentedControl.selectedSegmentIndex == 0 {
             defaultModeLabel.isHidden = false
             customModeTextField.isHidden = true
+            customModeTextField.text = ""
         } else {
             defaultModeLabel.isHidden = true
             customModeTextField.isHidden = false
         }
+        inputTextChanged()
     }
+    
+    @IBAction func ignoredTextChanged() {
+        inputTextChanged()
+    }
+    
 }
  

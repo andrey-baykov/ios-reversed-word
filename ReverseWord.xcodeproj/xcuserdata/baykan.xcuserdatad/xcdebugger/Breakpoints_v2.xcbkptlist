@@ -16,7 +16,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "testReversedStringLettersOnly()"
+            landmarkName = "testDefaultReversedStringLettersOnly()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -33,6 +33,22 @@
             startingLineNumber = "30"
             endingLineNumber = "30"
             landmarkName = "testReverseWordOnce()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2499EDA7-B4E5-47E0-84C7-36EAD86BB2B1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ReverseWord/TextReverseManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "anagramWordReversed(originWord:ignoredCaracters:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

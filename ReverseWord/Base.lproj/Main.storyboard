@@ -47,9 +47,11 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvk-gs-Ylw">
                                 <rect key="frame" x="16" y="442" width="288" height="60"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="pLI-6E-sGv"/>
                                 </constraints>
+                                <color key="tintColor" red="0.96078431610000004" green="0.96078431610000004" blue="0.96078431610000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Reverse"/>
                                 <connections>
@@ -120,6 +122,10 @@
                                 <rect key="frame" x="16" y="308" width="288" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="ignoredTextChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="uMP-4f-tiw"/>
+                                    <action selector="typingInIgnoredIsDone" destination="BYZ-38-t0r" eventType="editingDidEnd" id="EU6-M3-Q6c"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -173,7 +179,7 @@
                 <navigationController title="Hello" automaticallyAdjustsScrollViewInsets="NO" id="0ft-l9-v7k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BFw-lj-ico">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
