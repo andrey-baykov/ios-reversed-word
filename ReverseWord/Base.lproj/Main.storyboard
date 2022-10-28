@@ -125,6 +125,7 @@
                                 <connections>
                                     <action selector="ignoredTextChanged" destination="BYZ-38-t0r" eventType="editingChanged" id="uMP-4f-tiw"/>
                                     <action selector="typingInIgnoredIsDone" destination="BYZ-38-t0r" eventType="editingDidEnd" id="EU6-M3-Q6c"/>
+                                    <action selector="typingInIgnoredIsDone" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="anD-PZ-I5v"/>
                                 </connections>
                             </textField>
                         </subviews>
@@ -161,8 +162,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="lZm-Y6-2Jl"/>
                     <connections>
-                        <outlet property="customModeTextField" destination="71R-Bg-PHy" id="bsY-dW-Zzv"/>
                         <outlet property="defaultModeLabel" destination="u4c-No-GB1" id="ONh-gU-zci"/>
+                        <outlet property="ignoredTextField" destination="71R-Bg-PHy" id="bsY-dW-Zzv"/>
                         <outlet property="inputTextField" destination="0zG-nB-Ub2" id="7h1-L3-AlY"/>
                         <outlet property="reverseButton" destination="gvk-gs-Ylw" id="FdI-OY-KDt"/>
                         <outlet property="reversedLabel" destination="7OB-A0-lnD" id="CCd-IQ-AkG"/>
@@ -179,7 +180,7 @@
                 <navigationController title="Hello" automaticallyAdjustsScrollViewInsets="NO" id="0ft-l9-v7k" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="BFw-lj-ico">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -8,7 +8,7 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet private weak var inputTextField: UITextField!
     @IBOutlet weak var switchModeSegmentedControl: UISegmentedControl!
     @IBOutlet weak var defaultModeLabel: UILabel!
-    @IBOutlet weak var customModeTextField: UITextField!
+    @IBOutlet weak var ignoredTextField: UITextField!
     
    
     var isReversed = false
@@ -23,21 +23,23 @@ final class ReverseWordsViewController: UIViewController {
         inputTextField.accessibilityIdentifier = "inputTextField"
         reversedLabel.accessibilityIdentifier = "reversedLabel"
         reverseButton.accessibilityIdentifier = "reverseButton"
+        switchModeSegmentedControl.accessibilityIdentifier = "switchMode"
+        ignoredTextField.accessibilityIdentifier = "ignoredTextField"
         switchModeSegmentedControl.selectedSegmentIndex = 0
         defaultModeLabel.isHidden = false
-        customModeTextField.isHidden = true
+        ignoredTextField.isHidden = true
     }
     
     @IBAction func reverseButtonTapped() {
         if isReversed {
             inputTextField.text = ""
             reversedLabel.text = ""
-            customModeTextField.text = ""
+            ignoredTextField.text = ""
             reverseButton.setTitle("Reverse", for: .normal)
             reverseButton.isEnabled = false
             isReversed = false
         } else {
-            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "", ignoredCaracters: customModeTextField.text ?? "")
+            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "", ignoredCaracters: ignoredTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             isReversed = true
         }
@@ -58,18 +60,18 @@ final class ReverseWordsViewController: UIViewController {
     }
     
     @IBAction func typingInIgnoredIsDone() {
-        inputTextField.resignFirstResponder()
+        ignoredTextField.resignFirstResponder()
     }
     
     @IBAction func modeSwitched() {
         reversedLabel.text = ""
         if switchModeSegmentedControl.selectedSegmentIndex == 0 {
             defaultModeLabel.isHidden = false
-            customModeTextField.isHidden = true
-            customModeTextField.text = ""
+            ignoredTextField.isHidden = true
+            ignoredTextField.text = ""
         } else {
             defaultModeLabel.isHidden = true
-            customModeTextField.isHidden = false
+            ignoredTextField.isHidden = false
         }
         inputTextChanged()
     }
