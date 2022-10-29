@@ -13,12 +13,11 @@ final class TextReverseManager {
         let arrayOrigin = [String](originText.components(separatedBy: " "))
         var arrayOutput = [String]()
         for word in arrayOrigin {
-            if ignoredCaracters != "" {
+            if !ignoredCaracters.isEmpty {
                 arrayOutput.append(String(anagramWordReversed(originWord: word, ignoredCaracters: ignoredCaracters)))
             } else {
                 arrayOutput.append(String(anagramWordReversed(originWord: word)))
             }
-            
         }
         return arrayOutput.joined(separator: " ")
     }
@@ -39,9 +38,6 @@ final class TextReverseManager {
                 arrayOutput.append(String(char))
             }
         }
-   
-       
-        
         return arrayOutput.joined()
     }
     
@@ -50,18 +46,17 @@ final class TextReverseManager {
         var arrayOutput = [String]()
         
         for char in originWord {
-            if (!ignoredCaracters.contains(char)) {
+            if !ignoredCaracters.contains(char) {
                 lettersArray.append(String(char))
             }
         }
         for char in originWord {
-            if (!ignoredCaracters.contains(char)) {
+            if !ignoredCaracters.contains(char) {
                 arrayOutput.append(lettersArray.popLast()!)
             } else {
                 arrayOutput.append(String(char))
             }
         }
-
         return arrayOutput.joined()
     }
 }

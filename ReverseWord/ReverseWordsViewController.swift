@@ -6,9 +6,9 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet private weak var reversedLabel: UILabel!
     @IBOutlet private weak var reverseButton: UIButton!
     @IBOutlet private weak var inputTextField: UITextField!
-    @IBOutlet weak var switchModeSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var defaultModeLabel: UILabel!
-    @IBOutlet weak var ignoredTextField: UITextField!
+    @IBOutlet private weak var switchModeSegmentedControl: UISegmentedControl!
+    @IBOutlet private weak var defaultModeLabel: UILabel!
+    @IBOutlet private weak var ignoredTextField: UITextField!
     
    
     var isReversed = false
@@ -25,7 +25,6 @@ final class ReverseWordsViewController: UIViewController {
         reverseButton.accessibilityIdentifier = "reverseButton"
         switchModeSegmentedControl.accessibilityIdentifier = "switchMode"
         ignoredTextField.accessibilityIdentifier = "ignoredTextField"
-        switchModeSegmentedControl.selectedSegmentIndex = 0
         defaultModeLabel.isHidden = false
         ignoredTextField.isHidden = true
     }

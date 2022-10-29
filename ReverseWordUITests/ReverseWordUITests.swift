@@ -19,18 +19,44 @@ final class ReverseWordUITests: XCTestCase {
     
     override func setUpWithError() throws {
         continueAfterFailure = false
+        app.launchEnvironment = ["AutoCorrection": "Disabled"]
         app.launch()
+    }
+    
+    private func tapText(textToTap:String) {
+        for char in textToTap {
+            if char == " " {
+                app.keys["space"].tap()
+            } else if char.isLowercase {
+                app.keys[String(char)].tap()
+            } else if char.isUppercase {
+                app.buttons["shift"].tap()
+                app.keys[String(char)].tap()
+            } else {
+                app.keys["more"].tap()
+                app.keys[String(char)].tap()
+                app.keys["more"].tap()
+            }
+        }
     }
     
     private func runCommonTestSteps(){
         inputTextField.tap()
-        inputTextField.typeText("Test string")
+        tapText(textToTap: "Test string")
         returnButton.tap()
         switchModeSegmentedControl.swipeLeft()
         reverseButton.tap()
     }
     
-    private func runCommonTestStepsDefaultMode(testString: String) {
+    private func runCommonTestStepsDefaultModeTap(testString: String) {
+        inputTextField.tap()
+        tapText(textToTap: testString)
+        returnButton.tap()
+        switchModeSegmentedControl.swipeLeft()
+        reverseButton.tap()
+    }
+    
+    private func runCommonTestStepsDefaultModeInsert(testString: String) {
         inputTextField.tap()
         inputTextField.typeText(testString)
         returnButton.tap()
@@ -40,7 +66,7 @@ final class ReverseWordUITests: XCTestCase {
     
     private func runCommonTestStepsCustomMode(testString: String) {
         inputTextField.tap()
-        inputTextField.typeText(testString)
+        tapText(textToTap: testString)
         returnButton.tap()
         switchModeSegmentedControl.swipeRight()
         ignoredTextField.tap()
@@ -71,11 +97,7 @@ final class ReverseWordUITests: XCTestCase {
         inputTextField.tap()
         app.keys["space"].tap()
         XCTAssertEqual(reverseButton.label, "Reverse")
-        app.keys["a"].tap()
-        app.keys["d"].tap()
-        app.keys["d"].tap()
-        app.keys["e"].tap()
-        app.keys["d"].tap()
+        tapText(textToTap: "added")
         returnButton.tap()
         reverseButton.tap()
         XCTAssertEqual(reversedLabel.label, "tseT gnirts dedda")
@@ -83,19 +105,19 @@ final class ReverseWordUITests: XCTestCase {
     }
     
     func testReverseAnagramDefaultMethodWithNumbers() throws {
-        runCommonTestStepsDefaultMode(testString: "Foxminded cool 24/7")
+        runCommonTestStepsDefaultModeTap(testString: "Foxminded cool 24/7")
         XCTAssertEqual(reversedLabel.label, "dednimxoF looc 24/7")
         XCTAssertEqual(reverseButton.label, "Clear")
     }
     
     func testReverseAnagramDefaultMethodWithLettersOnly() throws {
-        runCommonTestStepsDefaultMode(testString: "abcd efgh")
+        runCommonTestStepsDefaultModeTap(testString: "abcd efgh")
         XCTAssertEqual(reversedLabel.label, "dcba hgfe")
         XCTAssertEqual(reverseButton.label, "Clear")
     }
     
     func testReverseAnagramDefaultMethodWithNotLettersSymbols() throws {
-        runCommonTestStepsDefaultMode(testString: "a1bcd efg!h")
+        runCommonTestStepsDefaultModeInsert(testString: "a1bcd efg!h")
         XCTAssertEqual(reversedLabel.label, "d1cba hgf!e")
         XCTAssertEqual(reverseButton.label, "Clear")
     }
