@@ -27,6 +27,7 @@ final class ReverseWordsViewController: UIViewController {
         ignoredTextField.accessibilityIdentifier = "ignoredTextField"
         defaultModeLabel.isHidden = false
         ignoredTextField.isHidden = true
+        reverseButton.layer.cornerRadius = 10
     }
     
     @IBAction func reverseButtonTapped() {
@@ -38,7 +39,7 @@ final class ReverseWordsViewController: UIViewController {
             reverseButton.isEnabled = false
             isReversed = false
         } else {
-            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "", ignoredCaracters: ignoredTextField.text ?? "")
+            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "", customtMode: (switchModeSegmentedControl.selectedSegmentIndex != 0), ignoredCaracters: ignoredTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             isReversed = true
         }
