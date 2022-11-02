@@ -9,11 +9,11 @@ import Foundation
 
 final class TextReverseManager {
     
-    func reversedString(originText: String, customtMode: Bool, ignoredCaracters: String) -> String {
+    func reversedString(originText: String, customMode: Bool, ignoredCaracters: String) -> String {
         let arrayOrigin = [String](originText.components(separatedBy: " "))
         var arrayOutput = [String]()
         for word in arrayOrigin {
-            arrayOutput.append(String(anagramWordReversed(originWord: word, customtMode: customtMode, ignoredCaracters: ignoredCaracters)))
+            arrayOutput.append(String(anagramWordReversed(originWord: word, customtMode: customMode, ignoredCaracters: ignoredCaracters)))
         }
         return arrayOutput.joined(separator: " ")
     }
@@ -21,21 +21,21 @@ final class TextReverseManager {
     private func anagramWordReversed(originWord: String, customtMode: Bool, ignoredCaracters: String) -> String{
         var lettersArray = [String]()
         var arrayOutput = [String]()
-        var arrayOfIgnoredSymbols = [String]()
+        var ignoredSymbols = [String]()
         for char in originWord {
             if customtMode && ignoredCaracters.contains(char) {
-                arrayOfIgnoredSymbols.append(String(char))
+                ignoredSymbols.append(String(char))
             } else if !customtMode && !char.isLetter {
-                arrayOfIgnoredSymbols.append(String(char))
+                ignoredSymbols.append(String(char))
             }
         }
         for char in originWord {
-            if !arrayOfIgnoredSymbols.contains(String(char)) {
+            if !ignoredSymbols.contains(String(char)) {
                 lettersArray.append(String(char))
             }
         }
         for char in originWord {
-            if arrayOfIgnoredSymbols.contains(String(char)) {
+            if ignoredSymbols.contains(String(char)) {
                 arrayOutput.append(String(char))
             } else {
                 arrayOutput.append(lettersArray.popLast()!)

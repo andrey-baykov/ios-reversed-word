@@ -21,35 +21,35 @@ final class ReverseWordTests: XCTestCase {
     }
 
     func testDefaultReversedStringLettersOnly() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "abcd efgh", customtMode: false, ignoredCaracters: ""), "dcba hgfe")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "abcd efgh", customMode: false, ignoredCaracters: ""), "dcba hgfe")
     }
     
     func testDefaultReversedStringWithNumbers() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded cool 24/7", customtMode: false, ignoredCaracters: ""), "dednimxoF looc 24/7")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded cool 24/7", customMode: false, ignoredCaracters: ""), "dednimxoF looc 24/7")
     }
     
     func testDefaultReversedStringWithSpecialCharacters() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "a1bcd efg!h", customtMode: false, ignoredCaracters: ""), "d1cba hgf!e")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "a1bcd efg!h", customMode: false, ignoredCaracters: ""), "d1cba hgf!e")
     }
     
     func testReversedAnagramWordDefaultOnlyLetters() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded", customtMode: false, ignoredCaracters: ""), "dednimxoF")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded", customMode: false, ignoredCaracters: ""), "dednimxoF")
     }
     
     func testReversedAnagramCustomIgnoredLetters() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "a1bcd efglh", customtMode: true, ignoredCaracters: "xl"), "dcb1a hgfle")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "a1bcd efglh", customMode: true, ignoredCaracters: "xl"), "dcb1a hgfle")
     }
     
     func testReversedAnagramCustomWithoutIgnoredLetters() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "abcd efgh", customtMode: true, ignoredCaracters: "xl"), "dcba hgfe")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "abcd efgh", customMode: true, ignoredCaracters: "xl"), "dcba hgfe")
     }
     
     func testReversedAnagramCustomWithIgnoredLettersAndNumbers() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded cool 24/7", customtMode: true, ignoredCaracters: "xl"), "dexdnimoF oocl 7/42")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded cool 24/7", customMode: true, ignoredCaracters: "xl"), "dexdnimoF oocl 7/42")
     }
     
     func testReversedAnagramCustomWithoutIgnoredWord() throws {
-        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded cool 24/7", customtMode: true, ignoredCaracters: "Foxminded"), "Foxminded looc 7/42")
+        XCTAssertEqual(textReverseManager?.reversedString(originText: "Foxminded cool 24/7", customMode: true, ignoredCaracters: "Foxminded"), "Foxminded looc 7/42")
     }
     
 }

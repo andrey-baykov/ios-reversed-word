@@ -43,12 +43,12 @@
 		7E1593D628E4C38F00481595 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7E1593D828E4C38F00481595 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7E1593DA28E4C38F00481595 /* ReverseWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordsViewController.swift; sourceTree = "<group>"; };
-		7E1593DD28E4C38F00481595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7E1593DF28E4C39000481595 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7E1593E228E4C39000481595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1593E428E4C39000481595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E1593EA28E4C64900481595 /* Roboto */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Roboto; sourceTree = "<group>"; };
 		7E99905929040AB400C8FB78 /* TextReverseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextReverseManager.swift; sourceTree = "<group>"; };
+		7ECFA95C291107B100223ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7ECFA95D291107B100223ADF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EEB74D028FF371F0039D76C /* ReverseWord tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ReverseWord tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEB74D228FF371F0039D76C /* ReverseWordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseWordTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -304,7 +304,7 @@
 		7E1593DC28E4C38F00481595 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E1593DD28E4C38F00481595 /* Base */,
+				7ECFA95C291107B100223ADF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 		7E1593E128E4C39000481595 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7E1593E228E4C39000481595 /* Base */,
+				7ECFA95D291107B100223ADF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

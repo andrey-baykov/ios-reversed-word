@@ -23,8 +23,8 @@ final class ReverseWordUITests: XCTestCase {
         app.launch()
     }
     
-    private func tapText(textToTap:String) {
-        for char in textToTap {
+    private func enterFromKeyboard(textToEnter:String) {
+        for char in textToEnter {
             if char == " " {
                 app.keys["space"].tap()
             } else if char.isLowercase {
@@ -42,7 +42,7 @@ final class ReverseWordUITests: XCTestCase {
     
     private func runCommonTestSteps(){
         inputTextField.tap()
-        tapText(textToTap: "Test string")
+        enterFromKeyboard(textToTap: "Test string")
         returnButton.tap()
         switchModeSegmentedControl.swipeLeft()
         reverseButton.tap()
@@ -50,7 +50,7 @@ final class ReverseWordUITests: XCTestCase {
     
     private func runCommonTestStepsDefaultModeTap(testString: String) {
         inputTextField.tap()
-        tapText(textToTap: testString)
+        enterFromKeyboard(textToTap: testString)
         returnButton.tap()
         switchModeSegmentedControl.swipeLeft()
         reverseButton.tap()
@@ -66,7 +66,7 @@ final class ReverseWordUITests: XCTestCase {
     
     private func runCommonTestStepsCustomMode(testString: String) {
         inputTextField.tap()
-        tapText(textToTap: testString)
+        enterFromKeyboard(textToTap: testString)
         returnButton.tap()
         switchModeSegmentedControl.swipeRight()
         ignoredTextField.tap()
@@ -97,7 +97,7 @@ final class ReverseWordUITests: XCTestCase {
         inputTextField.tap()
         app.keys["space"].tap()
         XCTAssertEqual(reverseButton.label, "Reverse")
-        tapText(textToTap: "added")
+        enterFromKeyboard(textToTap: "added")
         returnButton.tap()
         reverseButton.tap()
         XCTAssertEqual(reversedLabel.label, "tseT gnirts dedda")

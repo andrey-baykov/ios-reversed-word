@@ -39,7 +39,10 @@ final class ReverseWordsViewController: UIViewController {
             reverseButton.isEnabled = false
             isReversed = false
         } else {
-            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "", customtMode: (switchModeSegmentedControl.selectedSegmentIndex != 0), ignoredCaracters: ignoredTextField.text ?? "")
+            let isCustomModeSelected = switchModeSegmentedControl.selectedSegmentIndex != 0
+            reversedLabel.text = textReverseManager.reversedString(originText: inputTextField.text ?? "",
+                                                                   customMode: (isCustomModeSelected),
+                                                                   ignoredCaracters: ignoredTextField.text ?? "")
             reverseButton.setTitle("Clear", for: .normal)
             isReversed = true
         }
