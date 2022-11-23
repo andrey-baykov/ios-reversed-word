@@ -11,7 +11,7 @@ final class ReverseWordsViewController: UIViewController {
     @IBOutlet private weak var ignoredTextField: UITextField!
     
     var textReverseManager = TextReverseManager()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         reverseButton.isEnabled = false
